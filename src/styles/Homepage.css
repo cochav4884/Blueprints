@@ -1,0 +1,63 @@
+/* Homepage.css */
+
+.app-container {
+   /*background-image: url('../assets/houseBluePrint 2.jpg'); Ensure the file path and spacing are correct */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Optional spinner styling if used */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Homepage content styling */
+.homepage-container {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.homepage-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #004d40;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.homepage-instructions p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.homepage-instructions ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.homepage-instructions li {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.homepage-instructions strong {
+  color: #05d46d;
+}
+
+/* General content styling if needed elsewhere */
+.content {
+  padding: 20px;
+  opacity: 0.9;
+}

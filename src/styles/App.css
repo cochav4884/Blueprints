@@ -1,0 +1,68 @@
+/* Reset and layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Only prevent horizontal scrolling */
+  overflow-y: auto;   /* Allow vertical scrolling */
+}
+
+/* App wrapper */
+.app-container {
+  /* Removed background image styles */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Main content area */
+.content {
+  /* background-color: #0e8797; */
+  padding: 1rem;
+  margin-top: 72px; /* Match the header height */
+  flex-grow: 1;
+  overflow-y: auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 2rem;
+}
+
+.content-color {
+  background-color: #0e8797; /* Light translucent overlay */
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+  max-width: 100%;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  color: black;
+}
+
+/* Button container */
+.button-container {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+#btn-color {
+  background-color: #0e8797;
+}
+
+/* Responsive content layout */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}

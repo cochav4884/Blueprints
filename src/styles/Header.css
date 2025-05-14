@@ -1,0 +1,124 @@
+/* Header container */
+.header {
+  padding: 1rem;
+  position: fixed; /* Fixed at top */
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0 0 12px 12px; /* Round only the bottom if fixed */
+  background: linear-gradient(to right, #0a5f68, #0e8797);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Navbar button styling */
+.header button {
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header button:hover {
+  color: #dff9fb;
+}
+
+/* Navbar links container */
+.header .nav-links {
+  display: flex;
+  gap: 20px; /* Space between links */
+  align-items: center;
+}
+
+.header .nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px; /* Add some padding */
+  white-space: nowrap; /* Prevent text from wrapping */
+  box-shadow: 2px 2px 2px black; /* Add shadow to links */
+  border-radius: 8px; /* Slight rounding for aesthetics */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background for contrast */
+  transition: all 0.2s ease-in-out;
+}
+
+.header .nav-links a:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Hamburger button for mobile */
+.hamburger-button {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* Hide by default */
+  transition: color 0.3s ease;
+}
+
+.hamburger-button:hover {
+  color: #dff9fb;
+}
+
+/* Show the hamburger button and mobile nav on small screens */
+@media (max-width: 768px) {
+  .hamburger-button {
+    display: block; /* Show hamburger button */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%; /* Take up full width */
+    padding: 1rem 0; /* Add padding for better spacing */
+    align-items: center; /* Center the links horizontally */
+    gap: 1rem; /* Add space between the links */
+  }
+
+  .nav-links.show {
+    display: flex; /* Show links when toggled */
+  }
+
+  .nav-links a {
+    padding: 10px;
+    text-align: center;
+    width: 100%; /* Take up full width */
+    box-sizing: border-box; /* Prevent overflow */
+    display: block; /* Make sure each link is a block element */
+    text-decoration: none;
+  }
+
+  /* Ensure links are properly spaced */
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Ensure header layout is appropriate */
+  .header {
+    justify-content: space-between; /* Space for hamburger button */
+  }
+}
+
+
+
+
+.header .btn-light {
+  box-shadow: 2px 2px 2px black !important; /* Force it to apply */
+  border-radius: 8px;
+  background-color: #f8f9fa; /* match btn-light default if needed */
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.header .btn-light:hover {
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5) !important;
+}
+

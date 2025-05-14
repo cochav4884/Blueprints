@@ -1,0 +1,58 @@
+form .form-control:focus {
+  border-color: #0e8797;
+  box-shadow: 0 0 0 0.2rem rgba(14, 135, 151, 0.35);
+}
+
+.bg-color {
+  background: linear-gradient(to right, #0a5f68, #0e8797, #39c2cf);
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  color: white;
+  max-width: 600px;
+}
+
+/* Primary Save Button */
+#btn-color {
+  background-color: #0e8797;
+  border-color: #0e8797;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 2px black;
+}
+
+/* Hover Effect */
+#btn-color:hover {
+  background-color: #0a5f68; /* Darker teal for hover */
+  border-color: #0a5f68;
+  color: white;
+}
+
+/* Secondary Button */
+button.btn-secondary {
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Optional: Mobile responsiveness */
+@media (max-width: 576px) {
+  .bg-color {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  form .form-control {
+    font-size: 0.95rem;
+  }
+}
