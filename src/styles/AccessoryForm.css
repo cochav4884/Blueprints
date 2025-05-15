@@ -1,3 +1,7 @@
+body.menu-open .bg-color {
+  margin-top: 250px; /* adjust to your menu’s expanded height */
+}
+
 form .form-control:focus {
   border-color: #0e8797;
   box-shadow: 0 0 0 0.2rem rgba(14, 135, 151, 0.35);
@@ -11,6 +15,7 @@ form .form-control:focus {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   color: white;
   max-width: 600px;
+  transition: margin-top 0.3s ease;
 }
 
 /* Primary Save Button */
@@ -23,7 +28,6 @@ form .form-control:focus {
   color: white;
   transition: all 0.3s ease;
   box-shadow: 2px 2px 2px black;
-  margin-top: 1rem;
 }
 
 /* Hover Effect */
@@ -39,7 +43,14 @@ button.btn-secondary {
   padding: 0.6rem 1.5rem;
   border-radius: 10px;
   box-shadow: 2px 2px 2px black;
-  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-buttons {
+  margin-top: 1rem; /* space between last input and buttons */
+  display: flex;
+  gap: 10px; /* horizontal space between buttons */
+  align-items: center; /* vertically center buttons if heights differ */
 }
 
 button:disabled {
@@ -56,5 +67,12 @@ button:disabled {
 
   form .form-control {
     font-size: 0.95rem;
+  }
+
+  /* On small screens maybe increase margin */
+  @media (max-width: 576px) {
+    body.menu-open .bg-color {
+      margin-top: 300px;
+    }
   }
 }

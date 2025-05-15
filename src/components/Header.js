@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
 
@@ -6,6 +6,18 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+
+  // Sync body class with isMenuOpen state
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+
+    // Cleanup on unmount to avoid leftover class
+    return () => document.body.classList.remove("menu-open");
+  }, [isMenuOpen]);
 
   return (
     <header className="header bg-secondary p-3">
@@ -24,7 +36,9 @@ const Header = () => {
 
         {/* Nav links for medium and larger screens */}
         <nav className="d-none d-md-flex gap-3">
-          <Link to="/" className="btn btn-light">🏡 Home</Link> {/* Home link */}
+          <Link to="/" className="btn btn-light">
+            🏡 Home
+          </Link>
           <Link to="/house-accessories" className="btn btn-light">
             🏠 House Accessories
           </Link>
@@ -43,7 +57,9 @@ const Header = () => {
       {/* Mobile nav links (when menu is open) */}
       {isMenuOpen && (
         <div className="mt-3 d-md-none">
-          <Link to="/" className="btn btn-light w-100 mb-2">🏠 Home</Link> {/* Home link */}
+          <Link to="/" className="btn btn-light w-100 mb-2">
+            🏠 Home
+          </Link>
           <Link to="/house-accessories" className="btn btn-light w-100 mb-2">
             🏠 House Accessories
           </Link>

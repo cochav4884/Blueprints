@@ -110,17 +110,15 @@ const AccessoryForm = ({ accessory, onSave, onCancel }) => {
           </Form.Control>
         </Form.Group>
 
-        <Button id="btn-color" type="submit">
-          Save
-        </Button>
+        <div className="form-buttons">
+          <Button id="btn-color" type="submit">
+            Save
+          </Button>
 
-        <Button
-          variant="secondary"
-          onClick={onCancel}
-          style={{ marginLeft: "10px" }}
-        >
-          Cancel
-        </Button>
+          <Button variant="secondary" onClick={onCancel}>
+            Cancel
+          </Button>
+        </div>
       </Form>
     </div>
   );
