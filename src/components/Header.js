@@ -20,7 +20,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="header bg-secondary p-3">
+    <header className={`header p-3 ${isMenuOpen ? "menu-open" : ""}`}>
       <div className="d-flex justify-content-between align-items-center">
         {/* App title */}
         <h1 className="text-light m-0">🏡 Dream Home Builder App</h1>

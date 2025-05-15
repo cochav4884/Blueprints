@@ -12,8 +12,8 @@
   border-radius: 0 0 12px 12px; /* Round only the bottom if fixed */
   background: linear-gradient(to right, #0a5f68, #0e8797);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: height 0.3s ease;
 }
-
 
 /* Navbar button styling */
 .header button {
@@ -43,7 +43,12 @@
   white-space: nowrap; /* Prevent text from wrapping */
   box-shadow: 2px 2px 2px black; /* Add shadow to links */
   border-radius: 8px; /* Slight rounding for aesthetics */
-  background-color: rgba(255, 255, 255, 0.1); /* Subtle background for contrast */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Subtle background for contrast */
   transition: all 0.2s ease-in-out;
 }
 
@@ -67,6 +72,29 @@
 
 .hamburger-button:hover {
   color: #dff9fb;
+}
+
+@media (max-width: 768px) {
+  /* Increase header height when menu is open */
+  .header.menu-open {
+    height: 350px; /* allow header to grow naturally */
+    padding-bottom: 1rem; /* extra padding for spacing */
+    transition: height 0.3s ease;
+
+    .mt-3.d-md-none .btn {
+      margin-bottom: 0.5rem; /* adds space between buttons */
+    }
+
+    /* Optionally remove margin from the last button */
+    .mt-3.d-md-none .btn:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /* You can add a smooth transition if you want */
+  .header {
+    transition: height 0.3s ease;
+  }
 }
 
 /* Show the hamburger button and mobile nav on small screens */
