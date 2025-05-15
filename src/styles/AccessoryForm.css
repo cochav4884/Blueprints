@@ -23,6 +23,7 @@ form .form-control:focus {
   color: white;
   transition: all 0.3s ease;
   box-shadow: 2px 2px 2px black;
+  margin-top: 1rem;
 }
 
 /* Hover Effect */
@@ -38,6 +39,7 @@ button.btn-secondary {
   padding: 0.6rem 1.5rem;
   border-radius: 10px;
   box-shadow: 2px 2px 2px black;
+  margin-top: 1rem;
 }
 
 button:disabled {
